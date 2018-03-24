@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/se/entry.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <title>cal</title>
+
+   <script type="text/javascript">
+      /*function calc() {
+         // body...
+          var n1=parseInt(document.getElementById('n1').value);
+          var n2=parseInt(document.getElementById('n2').value);
+
+          document.getElementById('result').value= n1+n2;
+      }*/
+
+      function calculations(){
+
+         if(document.getElementById('n1').value && document.getElementById('n2').value){
+                document.getElementById('result').value= parseInt(document.getElementById('n1').value) + parseInt(document.getElementById('n2').value);
+            if(document.getElementById('result').value >= 12){
+                document.getElementById('status').value= "Pass";
+            }
+            else{
+                   document.getElementById('status').value= "Fail";
+            }
+         }
+      }
+      
+
+
+   </script>
+
+   <style type="text/css">
+      input[type=text],
+      input[type=number]
+       {
+              background-color:;
+              height: 25px;
+              border: 5px gray;
+              border-style: groove;
+              background-color:black;
+              color: white;
+              text-transform: uppercase;
+              width: 
+        }
+   
+        select,
+          input[type=submit]
+          {
+            background-color:;
+            height: 40px;
+            border: 5px gray;
+            border-style: groove;
+          }
+
+        form{
+          font-size: 1.5em;
+          color: white
+          }
+
+
+
+   
+   </style>
+</head>
+
+<body style="background-color:;background:linear-gradient(to right,rgb(25, 115, 151  ) 2%,rgb(34,52,76) 60%) ">
+
+   <section style="background-color:;height: 120px;width: 100%;background:linear-gradient(to right,rgb(25, 115, 151  ) 2%,rgb(34,52,76) 60%)">
+         <div style="float: left;"><img src="./cal_files/svm.png"></div>
+         <div style="margin-left:500px;color:white;background-color: ;padding-top: 20px"><p style="font-size: 2em"> Exam Management System</p></div><hr>
+       
+   </section>
+      
+         <form action="http://localhost/se/entry.php">
+              <table style="height:500px;width: px">
+                 <tbody><tr>
+                  <td>Er_No:</td>
+                  <td><input type="number" name="Er"></td>
+                 </tr>
+
+                 <tr>
+                  <td>First Name:</td>
+                  <td><input type="text" name="FName"></td>
+                 </tr>
+
+                 <tr>
+                   <td>Last Name:</td>
+                  <td><input type="text" name="LName"></td>
+                 </tr>
+
+                  <tr>
+                  <td>Subject:</td>
+                  <td>
+                     <select name="Sub">
+                        <option>SE</option>
+                        <option>AJ</option>
+                        <option>WT</option>
+                        <option>.NET</option>
+                        <option>CG</option>
+                        <option>DE</option>
+                     </select>
+                  </td>
+                 </tr>
+
+                 <tr>
+                  <td>Status</td>
+                  <td>
+                     
+                             <select name="attend">
+                                <option>PRESENT</option>
+                                <option>ABSENT</option>
+                             </select>
+                          
+                  </td>
+                 </tr>
+
+                 <tr>
+                  <td> Out of 10:</td>
+                  <td><input type="text" id="n1" name="Ten" onchange="calculations()"></td>
+                 </tr>
+
+                 <tr>
+                  <td>Out of 20:</td>
+                  <td><input type="text" id="n2" name="Twenty" onchange="calculations()"></td>
+                 </tr>
+
+                 <tr>
+                  <td>Total:</td>
+                  <td><input type="text" id="result" name="Total"></td>
+                 </tr>
+
+                  <tr>
+                  <td>Status</td>
+                  <td><input type="text" id="status" name="Sta"></td>
+                 </tr>
+
+
+
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit"></td>
+            </tr>
+            
+
+              </tbody></table>
+         
+   </form>
+
+
+ 
+</body></html>

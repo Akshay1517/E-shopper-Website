@@ -1,0 +1,208 @@
+<html>
+<head>
+  <title>form</title>
+
+  <link rel="stylesheet" type="text/css" href="csso.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script type="text/javascript">
+    function validate()
+	  {
+	      if(document.myForm.No.value=="")
+		 {
+		   alert("enter valid ");
+		   document.myForm.No.focus();
+		   return false;
+		 }
+	  
+	     if(document.myForm.Name.value=="")
+		 {
+		   alert("enter valid name");
+		   document.myForm.Name.focus();
+		   return false;
+		 }
+		 
+         if( document.myForm.Pass.value == "" || document.myForm.Pass.value.length != 10 )
+         
+         
+			{
+			    alert("please enter the correct password minimum 10 digit require");
+				document.myForm.Pass.focus();
+				return false;
+			}
+	  }
+
+	  function validateEmail()
+      {
+         var emailID = document.myForm.EMail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) 
+         {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         return( true );
+      }
+   
+
+  
+  </script>
+
+
+   <style type="text/css">
+   	
+   input[type=text],
+   input[type=number] ,
+   input[type=password]
+   {
+  
+             background: #f2f2f2;
+             border: 2px solid black;
+             height: 30px;
+        }
+
+
+     textarea,select{
+  
+             background: #f2f2f2;
+             border: 2px solid black;
+             color: black
+        } 
+
+        td{
+        	font-size: 1.5em
+        }
+
+    </style>
+  
+ </head>
+ <body style="padding-top: 100px;background-color:;background:linear-gradient(to right,rgb(25, 115, 151  ) 30%,rgb(58, 151, 165) 60%);color: white;">
+ 
+  <form action="" method="" name="myForm" onsubmit="return(validate());">
+      <fieldset>
+	       <legend>Personal Details</legend>
+		  <table  height="500px"> 
+		   <tr>
+		       <td>Id:</td>
+			   <td><input type="number" name="No"></td>
+			</tr>
+			<tr>
+			   <td>UserName:</td>
+			   <td><input type="text" name="Name"></td>
+			 </tr>
+			 
+			 <tr>
+			   <td> Email:</td>
+			   <td><input type="text" name="EMail" onsubmit="(return(validateEmail())"></td>
+			 </tr>
+			 
+			 <tr>
+			   <td>DOB:</td>
+			   <td><input type="text" name="Dob" placeholder="DD/MM/YY"></td>
+			 </tr>
+			 
+			 <tr>
+			    <td>Address:</td>
+				<td><textarea rows="6" name="Address" style="width:400px" placeholder="Enter your address here............."></textarea></td>
+			 </tr>
+			 
+			 <tr>
+			   <td>Password:</td>
+			   <td><input type="password" name="Pass"></td>
+			 </tr>
+			 
+			 <tr>
+			    <td>Contact_No:</td>
+				<td><input type="number" name="Contact" </td>
+			</tr>
+			
+			 <tr>
+			   <td>Country</td>
+			   <td>
+			   
+			        <table width="100" cellpadding="10">
+					  <tr>  
+					    <td>
+						  <select name="Country">
+					            <option>INDIA</option>
+								<option>USA</option>
+								<option>UK</option>
+								<option>UAE</option>
+								<option>JAPAN</option>
+								<option>CHINA</option>
+		
+					      </select>
+					    </td>
+
+						<td >State</td>
+						
+					   <td>
+					       <select name="State">
+					         	<option>GUJARAT</option>
+								<option>DELHI</option>
+								<option>MHARASTRA</option>
+								<option>CHHENAI</option>
+								<option>PUNJAB</option>
+					        </select>
+					    </td>
+
+						<td>City:</td>
+						 <td>
+						   <select name="Area">
+					            <option>SURAT</option>
+								<option>MUMBAI</option>
+								<option>AHMEDABAD</option>
+								<option>HRIYANA</option>
+								<option>NEWYORK</option>
+					        </select>
+						 </td>
+					</tr>
+					</table>
+				</td>
+					
+			</tr>
+			
+			<tr>
+			  <td></td>
+			  
+			  <td>
+			     <table cellpadding="10">
+				    <tr>
+					   <td><input type="radio" name="Radio"></td>
+					   <td>Male</td>
+					   <td><input type="radio" name="Radio"></td>
+					   <td>Female</td>
+					</tr>
+				 </table>
+			  </td>
+			</tr>
+			
+			 
+		   </table>
+	  </fieldset>
+	  
+	 
+	  
+	  <center><input type="submit" name="Submit" onclick="imge/e4.jpg">
+	  
+	  <input type="reset" name="Reset"></center>
+  </form>
+
+  <div>
+    
+    <nav style="background:linear-gradient(to right,rgb(25, 115, 151  ) 2%,rgb(34,52,76) 60%) ">
+        <img src="imge/nav.png" height="80" width="200" align="left">
+      <ul>
+        <li><i style="color:white" class="fa fa-home"><a href="home1.html">HOME</a></i></li>
+          <li><i style="color:white" class="fa fa-user-plus"><a href="form.html">SignUp</a></i></li>
+            <li><i style="color:white" class="fa fa-sign-in"><a href="login.html">Login</a></i></li>
+            <li><i style="color:white" class="fa fa-address-book"><a href="contact.html">Contact</a></i></li>
+            <li><i style="color:white" class="fa fa-users"><a href="about.html">About us</a></i></li>
+          </ul>
+       </nav>
+    </div>
+  
+ </body>

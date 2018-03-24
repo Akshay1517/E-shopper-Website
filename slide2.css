@@ -1,0 +1,75 @@
+/* sec one */
+#s2{
+	height: 300px;
+	width: 1000px;
+	background-color: tan;
+	border: 2px solid gray;
+	border-style: outset;
+    margin-left: 13px;
+
+
+}
+
+
+@keyframes slider2{
+	0%{
+		left:0;
+	}
+	
+	10%{
+		left:0;
+	}
+	
+	20%{
+		left:-100%;
+	}
+	
+	25%{
+		left:-100%;
+	}
+	
+	45%{
+		left:-100%;
+	}
+	
+	50%{
+		left:-200%;
+	}
+	
+	70%{
+		left:-200%;
+	}
+	
+	75%{
+		left:-300%;
+	}
+	
+	95%{
+		left:-300%;
+	}
+	
+	100%{
+		left:-400%;
+	}
+}
+
+#slider2{
+	overflow: hidden;
+	height: 300px;
+	width: 1000px;background-color: red
+}
+
+#slider2 figure img{
+	
+float:left;
+
+}
+
+#slider2 figure{
+	position: relative;
+	width: 500%;
+	margin:0;
+	padding:0;
+	animation: 20s slider infinite;
+
+}
